@@ -1,0 +1,48 @@
+.animatedCard{
+    animation: 1s ease 0s infinite normal none running flipAnimation;
+}
+
+.smoothFlip{
+    animation: 0.2s ease 0s normal none running smoothFlip;
+}
+
+.animatedNumber{
+    animation: 1s ease 0s infinite normal none running flipNumberAnimation;
+}
+
+@keyframes flipAnimation {
+    0%{
+        transform:rotate3D(1,0,0,0deg);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .1) inset;
+    }
+    60%{
+        opacity: 1;
+    }
+	100%{
+        opacity: 0;
+        transform:rotate3D(-2,0,0,180deg);
+        box-shadow: none;
+    }
+}
+
+@keyframes smoothFlip {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes flipNumberAnimation {
+    0%{
+        transform:rotate3D(1,0,0,0deg);
+    }
+    50%{
+        transform:rotate3D(1,0,0,-90deg);
+    }
+    100%{
+        transform:rotate3D(1,0,0,-360deg);
+    }  
+}
+
